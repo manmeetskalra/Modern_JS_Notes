@@ -1,6 +1,6 @@
-####Keyboard events & Keyboard properties
+## Keyboard events & Keyboard properties
 
-######Code
+### Code
 
 ```const function_name = (e) => {
     // execute code
@@ -9,15 +9,15 @@
 itemInput.addEventListener(${property}, function_name)
 ```
 
-######Properties
+### Properties
 
 - `keypress`: tap in key or hold it, it will fire off once
 - `keydown`: tap and it will fire until key is pressed
 - `keyup`: tap and it will fire off once you release
 
-####Input Events
+## Input Events
 
-######Code
+### Code
 
 ```const itemInput = document.ElementById('item-input')
 
@@ -28,15 +28,15 @@ const function_name = (e) => {
 itemInput.addEventListener(${property}, function_name)
 ```
 
-######Properties
+### Properties
 
 - `input`: take the input value
 - `change`: take the value, used when selected
 - `blur`: used to make the element unfocussed when not in use
 - `focus`: used to make the element focused when is use
 
-####Form Submission & FormData Object
-######Code
+## Form Submission & FormData Object
+### Code
 
 ```const form = document.ElementById('item-form')
 
@@ -57,13 +57,13 @@ const onSubmit = (e) => {
 itemInput.addEventListener(${property}, function_name)
 ```
 
-######Properties
+### Properties
 
 - `FormData`: best approach to get form entries
 
-####Event Bubbling
+## Event Bubbling
 
-######Code
+### Code
 
 `````const child = document.querySelector('child');
 const parent1 = document.querySelector('parent1');
@@ -92,7 +92,7 @@ parent3.addEventListener('click', (e)=>{
 });````
 `````
 
-####Event Delegation & Multiple Events
+## Event Delegation & Multiple Events
 
 Event Delegation: For multiple items, instead of adding event listeners to mutiple elements, we can get 'ul' and delegate event action to all the elements inside that 'ul'
 
@@ -109,9 +109,9 @@ list.addEventListener('click', (e) => {
 });
 ```
 
-####MIssing sone
+## MIssing sone
 
-####Callbacks
+## Callbacks
 
 When we want some function to execute after the execution of that function. We set it in callback
 
@@ -144,7 +144,7 @@ function getPosts () {
 createPosts({title:'Title one', dscription: 'Description one'}, getPosts);
 ```
 
-####AJAX(async js and xml) & XHR(XMLHttpRequest) Object
+## AJAX(async js and xml) & XHR(XMLHttpRequest) Object
 
 A built in browser object that allows us to make Http requests. We can make requests to servers without having to refresh the page. This allows us to make our webppages more dynamic. Nowadays you'll use fetch API (JSON) than XHR.
 
@@ -166,7 +166,7 @@ xhr.onreadystatechange() = function () {
 }
 ```
 
-####Callback Hell
+## Callback Hell
 
 When you pass callbacks within callbacks, it become nested callbacks that is difficult to follow, this it is called callback hell
 
@@ -235,7 +235,7 @@ getUser
 console.log('Hello from global scope');
 ```
 
-####Callback To Promise Refactor
+## Callback To Promise Refactor
 
 ```const posts = [
   { title: 'Post One', body: 'This is post one' },
@@ -278,7 +278,7 @@ createPost({ title: 'Post Three', body: 'This is post' })
   .catch(showError);
 ```
 
-####Promise Chaining
+## Promise Chaining
 
 Used if you have sequence of async task to complete or if you have a promise that returns a value that is used in the other promise.
 
@@ -313,7 +313,7 @@ promise
   .then((x) => console.log('This will run no matter what', x));
 ```
 
-####Promises vs Callback Hell
+## Promises vs Callback Hell
 
 ```function getData(endpoint) {
   return new Promise((resolve, reject) => {
@@ -353,7 +353,7 @@ getData('./movies.json')
   .catch((error) => console.log(error));
 ```
 
-####Handling Multiple Promises with promise.all()
+## Handling Multiple Promises with promise.all()
 
 ```function getData(endpoint) {
   return new Promise((resolve, reject) => {
@@ -394,7 +394,7 @@ Promise.all([moviesPromise, actorsPromise, directorsPromise, dummyPromise])
   .catch((error) => console.log(error));
 ```
 
-####Fetch Basics
+## Fetch Basics
 
 Fetch API returns promises. New way to make Http requests
 
@@ -414,7 +414,7 @@ fetch('https://api.github.com/users/bradtraversy')
   .then((data) => (document.querySelector('h1').textContent = data.login));
 ```
 
-####Fetch Options - Method, Body Headers
+## Fetch Options - Method, Body Headers
 
 ```/*
   COMMON FETCH OPTIONS
@@ -442,7 +442,7 @@ function createPost({ title, body }) {
 createPost({ title: 'My Post', body: 'This is my Post' });
 ```
 
-####Name
+## Name
 
 Description
 
